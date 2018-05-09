@@ -306,12 +306,11 @@ public class SignupActivity extends AppCompatActivity {
 
                         else {
 
-                            Intent i = new Intent();
+                            Intent i = new Intent(SignupActivity.this,SignupActivity.class);
                             i.putExtra(EXTRA_ZIP, zipcode.getText().toString());
                             i.putExtra(LOGGED_IN, true);
 
-                            Log.d("TESTING", "Sign up Successful");
-                            setResult(RESULT_OK);
+//                            Log.d("TESTING", "Sign up Successful");
                             finish();
 
                             startActivity(i);

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1011402658833-br3a7gm56b6i8f1u839p64a1kogoo1h9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "acad277.pan.hal.petconnect",
+            "certificate_hash": "d19f8243116c9f8791d7a75be5613569e4cfc2a7"
+          }
+        },
+        {
           "client_id": "1011402658833-3dc3405hrbk477v73ldfs8ah8ml8bg4m.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

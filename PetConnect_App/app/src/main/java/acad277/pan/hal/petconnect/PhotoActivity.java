@@ -178,7 +178,7 @@ public class PhotoActivity extends AppCompatActivity {
                 && data != null && data.getData() != null) {
             mImageUri = data.getData();
 
-            Picasso.with(this).load(mImageUri).into(mImageView);
+            Picasso.get().load(mImageUri).into(mImageView);
         }
     }
 
@@ -205,15 +205,17 @@ public class PhotoActivity extends AppCompatActivity {
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception exception) {
-
                 // Handle unsuccessful uploads
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
                 // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                 Uri downloadUrl = taskSnapshot.getDownloadUrl();
+
+//                mImageUri = downloadUrl;
+//                Toast.makeText(MainActivity.this, mImageUri.toString(), Toast.LENGTH_LONG).show();
+
             }
         });
 

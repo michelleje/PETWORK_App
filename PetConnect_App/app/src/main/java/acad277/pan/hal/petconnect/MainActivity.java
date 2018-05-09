@@ -100,10 +100,10 @@ public static final String BREED_URL = "http://api.petfinder.com/pet.find?format
 
                 break;
             case R.id.menu_detail_feed:
-//                Intent c = new Intent(getApplicationContext(), ImagesActivity.class); //open photo feed
-//                c.putExtra(OPERATION, "feed");
-//                c.putExtra(INDEX, mIndex);
-//                startActivity(c);
+                Intent c = new Intent(getApplicationContext(), PhotoActivity.class); //open photo feed
+                c.putExtra(OPERATION, "feed");
+                c.putExtra(INDEX, mIndex);
+                startActivity(c);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -128,13 +128,13 @@ public static final String BREED_URL = "http://api.petfinder.com/pet.find?format
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent i = getIntent();
-        boolean login = i.getBooleanExtra(LOGGED_IN, false);
-
-        if(!login){
-            Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
-            startActivityForResult(intent, 0);
-        }
+//        Intent i = getIntent();
+//        boolean login = i.getBooleanExtra(LOGGED_IN, false);
+//
+//        if(!login){
+//            Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+//            startActivityForResult(intent, 0);
+//        }
 
         listPets = (ListView) findViewById(R.id.list_pet);
 

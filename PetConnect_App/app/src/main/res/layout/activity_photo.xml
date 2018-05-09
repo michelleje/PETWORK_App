@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="#fff8e5">
+
+
+
 
 
     <android.support.v7.widget.CardView
@@ -15,7 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="80dp"
         app:cardCornerRadius="15dp"
         app:contentPadding="20dp"
         app:cardBackgroundColor="#fff"
@@ -127,5 +129,23 @@
 
 
     </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PETWORK"
+            android:textSize="24sp"
+            android:textColor="#ffd155"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.Toolbar>
 
 </RelativeLayout>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PetConnect_App.iml" filepath="$PROJECT_DIR$/PetConnect_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PetConnect_App.iml" filepath="$PROJECT_DIR$/.idea/modules/PetConnect_App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PetConnect_App.iml" filepath="$PROJECT_DIR$/PetConnect_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

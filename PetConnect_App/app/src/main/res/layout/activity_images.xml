@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f6e6bd"
-    android:padding="16dp"
     >
+
 
     <ProgressBar
         android:id="@+id/progress_circle"
@@ -17,8 +17,28 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
         />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PETWORK"
+            android:textSize="24sp"
+            android:textColor="#ffd155"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.Toolbar>
 
 </RelativeLayout>

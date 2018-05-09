@@ -63,7 +63,7 @@ public class SigninActivity extends AppCompatActivity {
 //            mAuth = FirebaseAuth.getInstance(); // important Call
             signout = (Button)findViewById(R.id.signout);
             username = (TextView) findViewById(R.id.tvName);
-            feed=(Button) findViewById(R.id.explore);
+//            feed=(Button) findViewById(R.id.explore);
             from=findViewById(R.id.etLocation);
             numpet=findViewById(R.id.etNumpet);
             initial=findViewById(R.id.initial);
@@ -187,13 +187,13 @@ public class SigninActivity extends AppCompatActivity {
                     finish();
                 }
             });
-            feed.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-//                    startActivity(new Intent(getApplicationContext(), FeedActivity.class));
-                    finish();
-                }
-            });
+//            feed.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+////                    startActivity(new Intent(getApplicationContext(), FeedActivity.class));
+//                    finish();
+//                }
+//            });
 
             // TODO: Find Toolbar from View and set as ActionBar.
             toolbar = findViewById(R.id.my_toolbar);
