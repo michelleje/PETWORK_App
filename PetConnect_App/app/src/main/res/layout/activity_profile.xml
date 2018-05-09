@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:padding="2dp"
+        android:background="@drawable/circleshape"
+        />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Angela Woo"
+        android:textSize="28sp"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="35dp"
+        android:fontFamily="@font/assistant_semibold"
+        />
+    <!--<TextView-->
+        <!--android:id="@+id/tvZipcode"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/tvName"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="Zipcode: 90089"-->
+        <!--android:layout_padding="0dp"-->
+        <!--android:textSize="20sp"-->
+        <!--tools:layout_editor_absoluteX="154dp"-->
+        <!--tools:layout_editor_absoluteY="35dp"-->
+        <!--android:fontFamily="@font/assistant_light"-->
+        <!--/>-->
+
+    <Button
+        android:id="@+id/creationtime"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="@drawable/roundshape"
+        android:backgroundTint="#fff4d9"
+        android:fontFamily="@font/assistant_semibold"
+        android:text="zipcode"
+        android:textAlignment="center"
+        android:textColor="#7c7c7c"
+        android:textSize="18sp"
+        android:layout_marginTop="27dp"
+        android:layout_below="@id/tvName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        />
+
+    <Button
+        android:id="@+id/signout"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/roundshape"
+        android:backgroundTint="#ffd666"
+        android:fontFamily="@font/assistant_bold"
+        android:text="SIGN OUT"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"/>
+    <Button
+        android:id="@+id/explore"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/circleshape"
+        android:backgroundTint="#ffd666"
+        android:fontFamily="@font/assistant_bold"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:padding="0dp"
+        android:text="@string/symb"
+        android:textColor="#ffffff"
+        android:textSize="90sp"
+        android:layout_marginStart="3dp"/>
+
+    <TextView
+        android:id="@+id/initial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="A"
+        android:textSize="65sp"
+        android:fontFamily="@font/assistant_bold"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/creationtime"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/button2"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="emailadd@petwork.com"
+        android:textColor="#7c7c7c"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvEmail"
+        android:layout_below="@+id/tvEmail"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:text="From the best city ever"
+        android:textColor="#7c7c7c" />
+
+    <EditText
+        android:id="@+id/etNumpet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/etLocation"
+        android:layout_below="@+id/etLocation"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Have # pets"
+        android:textColor="#7c7c7c" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/creationtime"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignStart="@id/creationtime"
+        android:background="@drawable/circleshape"
+        android:backgroundTint="#fff4d9"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/button2"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignStart="@id/creationtime"
+        android:background="@drawable/circleshape"
+        android:backgroundTint="#fff4d9"
+        />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/button3"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignStart="@id/creationtime"
+        android:background="@drawable/circleshape"
+        android:backgroundTint="#fff4d9"
+        />
+
+
+</RelativeLayout>
