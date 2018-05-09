@@ -1,23 +1,8 @@
 <component name="libraryTable">
   <library name="com.android.support:support-fragment-26.1.0">
     <CLASSES>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/43fc8b1c29825d9ef917644aba840158/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/43fc8b1c29825d9ef917644aba840158/res" />
-=======
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/10f594b53f7f12b2771b8d75b2e497cf/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/10f594b53f7f12b2771b8d75b2e497cf/res" />
->>>>>>> master
-=======
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/73df8d3173c41f64c9c4f8c7e09e52e5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/73df8d3173c41f64c9c4f8c7e09e52e5/res" />
->>>>>>> master
-=======
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/e2e86637441f6c4499487c77cff6df07/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/e2e86637441f6c4499487c77cff6df07/jars/classes.jar!/" />
->>>>>>> master
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4134c39e8f5524b09ad73119f6afaee/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4134c39e8f5524b09ad73119f6afaee/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
