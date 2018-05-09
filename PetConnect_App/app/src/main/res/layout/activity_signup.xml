@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff8e5"
-    >
+    tools:context="acad277.pan.hal.petconnect.SignupActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:fontFamily="@font/bungee"
+        android:text="PETWORK"
+        android:textColor="#FFD155"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/assistant_bold"
+        android:text="SIGN UP WITH EMAIL"
+        android:textColor="#a6a6a6"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#cccccc"
+        android:ems="10"
+        android:fontFamily="@font/assistant"
+        android:inputType="textPersonName"
+        android:paddingBottom="17dp"
+        android:paddingTop="14dp"
+        android:hint="Name"
+        android:textColorHint="#ffbb00"
+        android:textAlignment="center"
+        android:textColor="#ffbb00"
+        android:textSize="18sp"/>
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etName"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#cccccc"
+        android:ems="10"
+        android:fontFamily="@font/assistant"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="17dp"
+        android:hint="Email"
+        android:textColorHint="#ffbb00"
+        android:textAlignment="center"
+        android:textColor="#ffbb00"
+        android:textSize="18sp"
+        android:paddingTop="14dp"/>
+    <EditText
+        android:id="@+id/etzipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etEmail"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:fontFamily="@font/assistant"
+        android:inputType=""
+        android:hint="Zip Code"
+        android:textColorHint="#ffbb00"
+        android:textAlignment="center"
+        android:backgroundTint="#cccccc"
+        android:textColor="#ffbb00"
+        android:paddingBottom="17dp"
+        android:textSize="18sp"
+        android:paddingTop="14dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etzipcode"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#cccccc"
+        android:ems="10"
+        android:fontFamily="@font/assistant"
+        android:hint="Password"
+        android:inputType="textPassword|numberPassword"
+        android:paddingBottom="15dp"
+        android:paddingTop="14dp"
+        android:textAlignment="center"
+        android:textColor="#ffbb00"
+        android:textColorHint="#ffbb00"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_below="@id/etPassword"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/roundshape"
+        android:backgroundTint="#ffd666"
+        android:fontFamily="@font/assistant_bold"
+        android:text="SIGN UP"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="17sp"/>
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_toEndOf="@id/signup"
+        android:layout_alignBottom="@id/signup"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/roundshape"
+        android:backgroundTint="#ffd666"
+        android:fontFamily="@font/assistant_bold"
+        android:text="SIGN IN"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="17sp"/>
 
 </RelativeLayout>
