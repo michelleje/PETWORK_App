@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:padding="8dp"
+    android:background="#fff8e5">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PETWORK"
+            android:textSize="24sp"
+            android:textColor="#ffd155"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.Toolbar>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:layout_below="@+id/my_toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="900dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/white" />
+
+
+        <ImageView
+            android:id="@+id/image_pet"
+            android:layout_width="140dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@android:drawable/ic_menu_manage"
+            android:background="#000000"
+            />
+
+        <TextView
+            android:id="@+id/text_main_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="12dp"
+            android:text="ROSE"
+            android:layout_toEndOf="@id/image_pet"
+            android:layout_marginStart="8dp"
+            android:textColor="#6e6e6e"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pomeranian and Chihuahua Mix"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_below="@+id/text_main_name"
+            android:layout_alignStart="@+id/text_main_name"
+            />
+
+        <TextView
+            android:id="@+id/text_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Young | "
+            android:textSize="20sp"
+            android:layout_below="@+id/text_breed"
+            android:layout_alignStart="@+id/text_main_name"
+            />
+
+        <TextView
+            android:id="@+id/text_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female | "
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/text_age"
+            android:layout_toEndOf="@+id/text_age"
+            />
+
+        <TextView
+            android:id="@+id/text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/text_age"
+            android:layout_toEndOf="@+id/text_sex"
+            />
+
+        <ImageView
+            android:id="@+id/image_background"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/background_detail_yellow"
+            android:layout_below="@id/image_pet"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/text_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City, Zipcode"
+            android:textSize="18sp"
+            android:layout_below="@id/text_age"
+            android:layout_alignStart="@id/text_main_name"
+            android:textColor="#7b7b7b"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/text_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOTES"
+            android:textSize="12sp"
+            android:layout_below="@+id/image_pet"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="20dp"
+            android:textColor="#afafaf"
+            />
+        <!--<TextView-->
+        <!--android:id="@+id/text_good_with"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="GOOD WITH"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_alignBaseline="@id/text_location"-->
+        <!--android:layout_toEndOf="@id/text_house_trained"-->
+        <!--android:layout_marginStart="40dp"-->
+        <!--android:textColor="#afafaf"-->
+        <!--/>-->
+
+
+
+        <TextView
+            android:id="@+id/text_notes_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stuffs"
+            android:textSize="14sp"
+            android:layout_below="@+id/text_notes"
+            android:layout_alignStart="@id/text_notes"
+            android:layout_marginTop="4dp"
+            />
+
+        <!--<TextView-->
+        <!--android:id="@+id/text_good_with_display"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Other dogs"-->
+        <!--android:textSize="14sp"-->
+        <!--android:layout_below="@id/text_location"-->
+        <!--android:layout_alignStart="@id/text_good_with"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--/>-->
+
+        <TextView
+            android:id="@+id/text_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HEALTH"
+            android:textSize="12sp"
+            android:layout_below="@id/text_notes_display"
+            android:layout_alignStart="@+id/text_notes"
+            android:layout_marginTop="20dp"
+            android:textColor="#afafaf"
+            />
+
+        <TextView
+            android:id="@+id/text_health_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vaccinations up to date, spayed/neutered."
+            android:textSize="14sp"
+            android:layout_below="@id/text_health"
+            android:layout_alignStart="@id/text_health"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/text_meet_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meet Rose"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_below="@+id/image_background"
+            android:layout_alignStart="@+id/text_health"
+            android:layout_marginTop="14dp"
+            />
+
+        <TextView
+            android:id="@+id/text_meet_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My name is Rose and I have the most wonderful soulful personality you will ever know! My story is a bit of a mystery. I was once very loved and my former people trained me, but I found myself lost... READ MORE"
+            android:textSize="14sp"
+            android:layout_below="@id/text_meet_name"
+            android:layout_alignStart="@id/text_notes"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            />
+
+        <ImageView
+            android:id="@+id/image_button_background"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/button_detail_yellow"
+            android:layout_below="@id/text_meet_display"
+            android:layout_marginTop="10dp"
+            />
+
+        <Button
+            android:id="@+id/button_foster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="I want to foster!"
+            android:layout_below="@id/text_meet_display"
+            android:layout_marginTop="14dp"/>
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

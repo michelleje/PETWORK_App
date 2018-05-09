@@ -7,15 +7,32 @@
     android:layout_height="match_parent"
     android:background="#fff8e5"
     tools:context="acad277.pan.hal.petconnect.FormActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PETWORK"
+            android:textSize="24sp"
+            android:textColor="#ffd155"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="350dp"
         android:layout_height="545dp"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:layout_below="@+id/my_toolbar"
         card_view:cardCornerRadius="20dp"
         card_view:contentPadding="20dp"
         card_view:cardBackgroundColor="#fff"
@@ -33,6 +50,7 @@
             >
 
             <EditText
+                android:id="@+id/username"
                 android:layout_marginTop="1dp"
                 android:layout_width="250dp"
                 android:layout_height="28dp"
@@ -44,6 +62,7 @@
                 />
 
             <EditText
+                android:id="@+id/usercontact"
                 android:layout_width="250dp"
                 android:layout_height="28dp"
                 android:background="#fff"
@@ -79,16 +98,16 @@
                 android:textColor="#7c7c7c"
                 />
 
-            <TextView
-                android:id="@+id/textview_petsathome_value"
+            <EditText
+                android:id="@+id/numofpet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="# people"
+                android:hint="# pets"
                 android:textColor="#7c7c7c"
                 android:textSize="15dp"
                 android:layout_gravity="start"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
                 />
 
             <View
@@ -108,16 +127,16 @@
                 android:textColor="#7c7c7c"
                 />
 
-            <TextView
-                android:id="@+id/textview_fosterexperiences_value"
+            <EditText
+                android:id="@+id/fosterexperiences"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="insert here"
+                android:hint="insert here"
                 android:textColor="#7c7c7c"
                 android:textSize="15dp"
                 android:layout_gravity="start"
-                android:layout_marginStart="173dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="175dp"
+                android:layout_marginTop="5dp"
                 />
 
             <View
@@ -139,16 +158,16 @@
                 android:layout_marginTop="55dp"
                 />
 
-            <TextView
-                android:id="@+id/textview_livingsituation_value"
+            <EditText
+                android:id="@+id/livingsituation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="insert here insert here insert here insert here insert here"
+                android:hint="insert here insert here insert here insert here insert here"
                 android:textColor="#7c7c7c"
                 android:textSize="15dp"
                 android:layout_gravity="start"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="65dp"
                 />
 
         </android.support.v7.widget.CardView>
@@ -211,7 +230,8 @@
             android:layout_height="65dp"
             app:cardCornerRadius="15dp"
             app:cardBackgroundColor="#f3f3f3"
-            app:contentPadding="15dp"
+            app:contentPaddingTop="11dp"
+            app:contentPaddingLeft="10dp"
             android:layout_marginTop="381dp"
             >
 
@@ -223,18 +243,6 @@
                 android:text="FAMILY MEMBERS*"
                 android:textColor="#7c7c7c"
                 android:layout_gravity="start"
-                />
-
-            <TextView
-                android:id="@+id/textview_familymembers_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="# people"
-                android:textColor="#7c7c7c"
-                android:textSize="15dp"
-                android:layout_gravity="start"
-                android:layout_marginTop="14dp"
-                android:layout_marginStart="5dp"
                 />
 
             <View
@@ -255,22 +263,33 @@
                 android:layout_gravity="start"
                 />
 
-            <TextView
-                android:id="@+id/textview_location_value"
+            <EditText
+                android:id="@+id/location_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="insert here"
+                android:hint="insert here"
                 android:textColor="#7c7c7c"
                 android:textSize="15dp"
                 android:layout_gravity="start"
-                android:layout_marginStart="170dp"
-                android:layout_marginTop="14dp"
+                android:layout_marginStart="172dp"
+                android:layout_marginTop="5dp"
                 />
+
+            <EditText
+                android:id="@+id/familymembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="# people"
+                android:textColor="#7c7c7c"
+                android:textSize="15sp" />
 
         </android.support.v7.widget.CardView>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/submitbutton"
             android:layout_width="125dp"
             android:layout_height="35dp"
             android:text="submit"

@@ -2,7 +2,9 @@ package acad277.pan.hal.petconnect;
 
         import android.content.Intent;
 
+        import android.content.SharedPreferences;
         import android.os.Parcelable;
+        import android.preference.PreferenceManager;
         import android.support.annotation.NonNull;
 
         import android.support.v7.app.AppCompatActivity;
@@ -37,8 +39,17 @@ package acad277.pan.hal.petconnect;
 
 public class SignupActivity extends AppCompatActivity {
         public static final String EXTRA_ZIP ="EXTRA_ZIP";
-    boolean login=false;
+        public static final String LOGGED_IN = "LOGGED_IN";
+        public static final String USER_EMAIL = "USER_EMAIL";
+        public static final String USER_PASSWORD = "USER_PASSWORD";
+        public static final String USER_ZIPCODE = "USER_ZIPCODE";
+        public static final String USER_NAME = "USER_NAME";
+
+
+
+    private boolean login = false;
     private FirebaseAuth mAuth;
+
 
     private EditText email,password,name,zipcode;
 
@@ -72,9 +83,6 @@ public class SignupActivity extends AppCompatActivity {
         zipcode=findViewById(R.id.etzipcode);
 
 
-        dbParent =database.getReference(name.getText().toString());
-
-
         zipcode.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -91,9 +99,7 @@ public class SignupActivity extends AppCompatActivity {
 
         //Check if User is Already LoggedIn
 
-        if(mAuth.getCurrentUser() != null)
-
-        {
+        if(mAuth.getCurrentUser() != null) {
 
             //User NOT logged In
 
@@ -116,8 +122,16 @@ public class SignupActivity extends AppCompatActivity {
                 String getemail = email.getText().toString().trim();
 
                 String getepassword = password.getText().toString().trim();
+//                String zip = zipcode.getText().toString();
 
                 callsignin(getemail, getepassword);
+
+//                Intent i = new Intent();
+//                i.putExtra(USER_ZIPCODE, zip);
+//                i.putExtra(LOGGED_IN, true);
+//                Log.d("TESTING", "Sign up Successful");
+//                setResult(RESULT_OK);
+//                finish();
 
 
             }
@@ -132,11 +146,10 @@ public class SignupActivity extends AppCompatActivity {
 
             public void onClick(View v) {
 
-
-
                 String getemail = email.getText().toString().trim();
-
                 String getepassword = password.getText().toString().trim();
+
+
 
                 callsignup(getemail,getepassword);
 
@@ -164,8 +177,6 @@ public class SignupActivity extends AppCompatActivity {
     //Create Account
 
     private void callsignup(String email,String password) {
-
-
 
         mAuth.createUserWithEmailAndPassword(email, password)
 
@@ -295,9 +306,12 @@ public class SignupActivity extends AppCompatActivity {
 
                         else {
 
-                            Intent i = new Intent(SignupActivity.this, SigninActivity.class);
+                            Intent i = new Intent();
                             i.putExtra(EXTRA_ZIP, zipcode.getText().toString());
+                            i.putExtra(LOGGED_IN, true);
 
+                            Log.d("TESTING", "Sign up Successful");
+                            setResult(RESULT_OK);
                             finish();
 
                             startActivity(i);
