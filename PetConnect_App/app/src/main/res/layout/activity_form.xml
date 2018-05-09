@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff8e5"
+    tools:context="acad277.pan.hal.petconnect.FormActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="350dp"
+        android:layout_height="545dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="20dp"
+        card_view:contentPadding="20dp"
+        card_view:cardBackgroundColor="#fff"
+        app:cardElevation="4dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_one"
+            app:cardElevation="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="310dp"
+            android:layout_height="116dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#fff4d9"
+            app:contentPadding="20dp"
+            >
+
+            <EditText
+                android:layout_marginTop="1dp"
+                android:layout_width="250dp"
+                android:layout_height="28dp"
+                android:background="#fff"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/edittext_name"
+                android:gravity="top"
+                android:textSize="18dp"
+                />
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="28dp"
+                android:background="#fff"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="47dp"
+                android:hint="@string/edittext_contact"
+                android:gravity="top"
+                android:textSize="18dp"
+                />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_two"
+            app:cardElevation="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="310dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#f3f3f3"
+            app:contentPadding="12dp"
+            android:layout_marginTop="130dp"
+            >
+
+
+            <TextView
+                android:id="@+id/textview_petsathome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="PETS AT HOME*"
+                android:layout_gravity="start"
+                android:textColor="#7c7c7c"
+                />
+
+            <TextView
+                android:id="@+id/textview_petsathome_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# people"
+                android:textColor="#7c7c7c"
+                android:textSize="15dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#d7d7d7"
+                />
+
+            <TextView
+                android:id="@+id/textview_fosterexperiences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FOSTER EXPERIENCES*"
+                android:textSize="10sp"
+                android:layout_marginStart="165dp"
+                android:textColor="#7c7c7c"
+                />
+
+            <TextView
+                android:id="@+id/textview_fosterexperiences_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="insert here"
+                android:textColor="#7c7c7c"
+                android:textSize="15dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="173dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#d7d7d7"
+                android:layout_marginTop="45dp"
+                />
+
+            <TextView
+                android:id="@+id/textview_livingsituation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIVING SITUATION"
+                android:textColor="#7c7c7c"
+                android:textSize="10sp"
+                android:layout_gravity="start"
+                android:layout_marginTop="55dp"
+                />
+
+            <TextView
+                android:id="@+id/textview_livingsituation_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="insert here insert here insert here insert here insert here"
+                android:textColor="#7c7c7c"
+                android:textSize="15dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="70dp"
+                />
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_three"
+            app:cardElevation="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="310dp"
+            android:layout_height="65dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#fff4d9"
+            app:contentPadding="12dp"
+            android:layout_marginTop="303dp"
+            >
+
+            <TextView
+                android:id="@+id/textview_timelength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIME LENGTH (Weeks)*"
+                android:textColor="#7c7c7c"
+                android:textSize="10sp"
+                android:layout_gravity="start"
+                />
+
+            <SeekBar
+                android:id="@+id/seekBar_timelength"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:thumbTint="#fff"
+                android:min="0"
+                android:max="10"
+                android:theme="@style/SeekbarTheme"
+                />
+
+            <TextView
+                android:id="@+id/textview_timelength_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:textColor="#7c7c7c"
+                android:textSize="16dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="16dp"
+                />
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_four"
+            app:cardElevation="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="310dp"
+            android:layout_height="65dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#f3f3f3"
+            app:contentPadding="15dp"
+            android:layout_marginTop="381dp"
+            >
+
+            <TextView
+                android:id="@+id/textview_familymembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="FAMILY MEMBERS*"
+                android:textColor="#7c7c7c"
+                android:layout_gravity="start"
+                />
+
+            <TextView
+                android:id="@+id/textview_familymembers_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# people"
+                android:textColor="#7c7c7c"
+                android:textSize="15dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="5dp"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#d7d7d7"
+                />
+
+            <TextView
+                android:id="@+id/textview_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOCATION*"
+                android:textSize="10sp"
+                android:layout_marginStart="165dp"
+                android:textColor="#7c7c7c"
+                android:layout_gravity="start"
+                />
+
+            <TextView
+                android:id="@+id/textview_location_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="insert here"
+                android:textColor="#7c7c7c"
+                android:textSize="15dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="14dp"
+                />
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:text="submit"
+            android:layout_gravity="end"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="465dp"
+            android:background="@drawable/button_background"
+
+            />
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

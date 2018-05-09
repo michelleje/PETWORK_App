@@ -64,23 +64,24 @@
         android:textColor="#ffbb00"
         android:textSize="18sp"
         android:paddingTop="14dp"/>
+
     <EditText
         android:id="@+id/etzipcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etEmail"
-        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/etPassword"
+        android:layout_centerVertical="true"
+        android:backgroundTint="#cccccc"
         android:ems="10"
         android:fontFamily="@font/assistant"
-        android:inputType=""
         android:hint="Zip Code"
-        android:textColorHint="#ffbb00"
-        android:textAlignment="center"
-        android:backgroundTint="#cccccc"
-        android:textColor="#ffbb00"
+        android:inputType=""
         android:paddingBottom="17dp"
-        android:textSize="18sp"
-        android:paddingTop="14dp"/>
+        android:paddingTop="14dp"
+        android:textAlignment="center"
+        android:textColor="#ffbb00"
+        android:textColorHint="#ffbb00"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/etPassword"
