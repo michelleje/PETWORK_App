@@ -2,11 +2,16 @@
   <library name="com.android.support.test:runner-1.0.1">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runner-1.0.1.aar/daa8674623f09beb9b8fe1f2b5768799/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runner-1.0.1.aar/daa8674623f09beb9b8fe1f2b5768799/res" />
 =======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runner-1.0.1.aar/33d6eb4f60e253600144aad3232ba1e7/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runner-1.0.1.aar/33d6eb4f60e253600144aad3232ba1e7/res" />
+>>>>>>> master
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runner-1.0.1.aar/1378560306b45f1d1091414375155129/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runner-1.0.1.aar/1378560306b45f1d1091414375155129/jars/classes.jar!/" />
 >>>>>>> master
     </CLASSES>
     <JAVADOC />
