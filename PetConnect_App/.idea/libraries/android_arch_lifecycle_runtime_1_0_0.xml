@@ -2,11 +2,16 @@
   <library name="android.arch.lifecycle:runtime-1.0.0">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b1f82781e8f2d421a39ce542b968f4b8/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b1f82781e8f2d421a39ce542b968f4b8/jars/classes.jar!/" />
 =======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e620cdcd59df7cd82331b594a7418711/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e620cdcd59df7cd82331b594a7418711/res" />
+>>>>>>> master
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f55b7e252d6ab6d52e57d5981f18bf6a/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f55b7e252d6ab6d52e57d5981f18bf6a/jars/classes.jar!/" />
 >>>>>>> master
     </CLASSES>
     <JAVADOC />

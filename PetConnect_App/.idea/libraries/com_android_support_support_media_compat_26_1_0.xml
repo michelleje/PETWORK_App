@@ -3,6 +3,7 @@
     <CLASSES>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7f5982df59511cefcf2b5a042fc1d49f/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7f5982df59511cefcf2b5a042fc1d49f/res" />
 =======
@@ -12,6 +13,10 @@
 =======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/2a2ac31dfaa1b9bd9ccde2c7f70017bd/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/2a2ac31dfaa1b9bd9ccde2c7f70017bd/res" />
+>>>>>>> master
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/6693f6a46358742de0b120b20965859b/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/6693f6a46358742de0b120b20965859b/jars/classes.jar!/" />
 >>>>>>> master
     </CLASSES>
     <JAVADOC />
