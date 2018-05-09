@@ -7,4 +7,10 @@
 /build
 /captures
 .externalNativeBuild
+<<<<<<< HEAD
 README.md
+=======
+PetConnect_App/.idea/libraries/com_android_support_support_annotations_26_1_0_jar.xml
+PetConnect_App/.idea/workspace.xml
+PetConnect_App/.idea/workspace.xml
+>>>>>>> master

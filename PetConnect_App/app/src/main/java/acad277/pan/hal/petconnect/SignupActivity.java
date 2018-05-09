@@ -11,12 +11,14 @@ package acad277.pan.hal.petconnect;
 
         import android.util.Log;
 
+        import android.view.KeyEvent;
         import android.view.View;
 
         import android.widget.Button;
 
         import android.widget.EditText;
 
+        import android.widget.TextView;
         import android.widget.Toast;
 
         import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,8 +32,10 @@ package acad277.pan.hal.petconnect;
         import com.google.firebase.auth.FirebaseUser;
 
         import com.google.firebase.auth.UserProfileChangeRequest;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
 
-    public class SignupActivity extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
         public static final String EXTRA_ZIP ="EXTRA_ZIP";
     boolean login=false;
     private FirebaseAuth mAuth;
@@ -39,8 +43,9 @@ package acad277.pan.hal.petconnect;
     private EditText email,password,name,zipcode;
 
     private Button signin, signup;
-
-
+    DatabaseReference dbRefNoteToEdit;
+    DatabaseReference dbParent;
+    DatabaseReference dbNewLocation;
 
     @Override
 
@@ -51,8 +56,9 @@ package acad277.pan.hal.petconnect;
         setContentView(R.layout.activity_signup);
 
         mAuth = FirebaseAuth.getInstance(); // important Call
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-
+//        dbRefNoteToEdit = database.get;
 
         signin = (Button)findViewById(R.id.signin);
 
@@ -66,6 +72,22 @@ package acad277.pan.hal.petconnect;
         zipcode=findViewById(R.id.etzipcode);
 
 
+        dbParent =database.getReference(name.getText().toString());
+
+
+        zipcode.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+
+                String input=zipcode.getText().toString();
+
+                dbNewLocation =dbParent.push();
+                //store message into database
+                dbNewLocation.setValue(input);
+
+                return false;
+            }
+        });
 
         //Check if User is Already LoggedIn
 
@@ -117,6 +139,16 @@ package acad277.pan.hal.petconnect;
                 String getepassword = password.getText().toString().trim();
 
                 callsignup(getemail,getepassword);
+
+//                DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+//                mDatabase.child("users").child().child("username").setValue(name);
+
+//                if(dbRefNoteToEdit == null){ // new note
+//                    DatabaseReference dbNewNote = dbRefNotes.push(); // getting a child NODE from main NOTES branch
+//                    dbNewNote.setValue(n);
+//                } else{ //existing note
+//                    dbRefNoteToEdit.setValue(n);
+//                }
 
 
             }
