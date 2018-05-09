@@ -129,6 +129,9 @@
             <state relative-caret-position="510">
               <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> 0d5b6f4163fdeca8b71a172d97dc8cfc03fb6f6a
+=======
 >>>>>>> 0d5b6f4163fdeca8b71a172d97dc8cfc03fb6f6a
               <folding />
             </state>
@@ -2533,9 +2536,12 @@
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525854043199" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 0d5b6f4163fdeca8b71a172d97dc8cfc03fb6f6a
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525842678323" />
 =======
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525841959649" />
@@ -2592,6 +2598,9 @@
 =======
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525841959649" />
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> 0d5b6f4163fdeca8b71a172d97dc8cfc03fb6f6a
+=======
 >>>>>>> 0d5b6f4163fdeca8b71a172d97dc8cfc03fb6f6a
       </method>
     </configuration>
@@ -2783,9 +2792,12 @@
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525854043199" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 0d5b6f4163fdeca8b71a172d97dc8cfc03fb6f6a
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525842678324" />
       </method>
     </configuration>
