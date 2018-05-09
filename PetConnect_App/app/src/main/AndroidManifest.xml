@@ -38,6 +38,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <!-- <activity android:name=".SignupActivity"></activity> -->
+<<<<<<< HEAD
         <activity android:name=".FormActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,6 +47,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".PetDetailActivity"></activity>
+=======
+        <activity android:name=".FormActivity"></activity>
+        <activity android:name=".ImageCapture"></activity>
+        <activity android:name=".PhotoActivity"></activity>
+        <activity android:name=".ImagesActivity"></activity>
+>>>>>>> master
     </application>
 
 </manifest>

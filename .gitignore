@@ -14,3 +14,6 @@ PetConnect_App/.idea/libraries/com_android_support_support_annotations_26_1_0_ja
 PetConnect_App/.idea/workspace.xml
 PetConnect_App/.idea/workspace.xml
 >>>>>>> master
+PetConnect_App/app/build.gradle
+PetConnect_App/app/build.gradle
+PetConnect_App/app/src/main/AndroidManifest.xml
