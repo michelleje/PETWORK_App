@@ -26,6 +26,9 @@ import com.google.firebase.auth.FirebaseUser;
 
     import acad277.pan.hal.petconnect.model.Userinfo;
 
+    import static acad277.pan.hal.petconnect.MainActivity.OPERATION;
+    import static acad277.pan.hal.petconnect.PetDetailActivity.INDEX;
+
 
 public class SigninActivity extends AppCompatActivity {
     public static final String TAG = "TAG";
@@ -45,6 +48,27 @@ public class SigninActivity extends AppCompatActivity {
         private String zipcode;
 ////        private DatabaseReference mDatabase;
 //        DatabaseReference dbRefCode;
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case R.id.menu_detail_home:
+                Intent i = new Intent(getApplicationContext(), MainActivity.class); //open profile page
+                i.putExtra(OPERATION, "main");
+                i.putExtra(INDEX, 0);
+                finish();
+
+                break;
+            case R.id.menu_detail_feed:
+                Intent c = new Intent(getApplicationContext(), PhotoActivity.class); //open photo feed
+                c.putExtra(OPERATION, "feed");
+                c.putExtra(INDEX, 0);
+                startActivity(c);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -4,10 +4,10 @@
 
 
     <item
-        android:id="@+id/menu_detail_feed"
+        android:id="@+id/menu_detail_profile"
         android:title="Photo Feed"
         app:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_menu_gallery"/>
+        android:icon="@android:drawable/ic_menu_info_details"/>
 
     <item
         android:id="@+id/menu_detail_home"

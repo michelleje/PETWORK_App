@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,6 +27,7 @@ import org.json.JSONObject;
 import acad277.pan.hal.petconnect.model.Pet;
 
 import static acad277.pan.hal.petconnect.MainActivity.API_KEY;
+import static acad277.pan.hal.petconnect.MainActivity.OPERATION;
 
 
 public class PetDetailActivity extends AppCompatActivity {
@@ -73,6 +75,27 @@ public class PetDetailActivity extends AppCompatActivity {
     private String searchLink;
 
     private String shelterEmail = "";
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case R.id.menu_detail_profile:
+                Intent i = new Intent(getApplicationContext(), SigninActivity.class); //open profile page
+                i.putExtra(OPERATION, "profile");
+                i.putExtra(INDEX, 0);
+                startActivity(i);
+
+                break;
+            case R.id.menu_detail_feed:
+                Intent c = new Intent(getApplicationContext(), PhotoActivity.class); //open photo feed
+                c.putExtra(OPERATION, "feed");
+                c.putExtra(INDEX, 0);
+                startActivity(c);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

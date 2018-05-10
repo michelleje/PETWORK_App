@@ -14,9 +14,13 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.content.FileProvider;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -46,6 +50,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
 
+import static acad277.pan.hal.petconnect.MainActivity.OPERATION;
+import static acad277.pan.hal.petconnect.PetDetailActivity.INDEX;
+
 public class PhotoActivity extends AppCompatActivity {
 
     private Button button_take_img;
@@ -70,6 +77,37 @@ public class PhotoActivity extends AppCompatActivity {
     private DatabaseReference mDatabaseRef;
 
     private StorageTask mUploadTask;
+
+    private Toolbar toolbar;
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case R.id.menu_detail_profile:
+                Intent i = new Intent(getApplicationContext(), SigninActivity.class); //open profile page
+                i.putExtra(OPERATION, "profile");
+                i.putExtra(INDEX, 0);
+                finish();
+
+                break;
+            case R.id.menu_detail_home:
+                Intent c = new Intent(getApplicationContext(), PhotoActivity.class); //open photo feed
+                c.putExtra(OPERATION, "home");
+                c.putExtra(INDEX, 0);
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //ALMOST always the same
+        //just change the first parameter of the next line
+        getMenuInflater().inflate(R.menu.menu_photo_feed, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,6 +166,10 @@ public class PhotoActivity extends AppCompatActivity {
             }
         });
 
+        // TODO: Find Toolbar from View and set as ActionBar.
+        toolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar); //tells android "He, here's the toolbar"
+        ActionBar actionBar = getSupportActionBar(); //for compatibility, get the action bar again?
 
     }
 
@@ -193,31 +235,31 @@ public class PhotoActivity extends AppCompatActivity {
 
     private void uploadFile() {
 
-        // Get the data from an ImageView as bytes
-        mImageView.setDrawingCacheEnabled(true);
-        mImageView.buildDrawingCache();
-        Bitmap bitmap = mImageView.getDrawingCache();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-        byte[] datatwo = baos.toByteArray();
-
-        UploadTask uploadTask = mStorageRef.putBytes(datatwo);
-        uploadTask.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                // Handle unsuccessful uploads
-            }
-        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
-                Uri downloadUrl = taskSnapshot.getDownloadUrl();
-
-//                mImageUri = downloadUrl;
-//                Toast.makeText(MainActivity.this, mImageUri.toString(), Toast.LENGTH_LONG).show();
-
-            }
-        });
+//        // Get the data from an ImageView as bytes
+//        mImageView.setDrawingCacheEnabled(true);
+//        mImageView.buildDrawingCache();
+//        Bitmap bitmap = mImageView.getDrawingCache();
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//        byte[] datatwo = baos.toByteArray();
+//
+//        UploadTask uploadTask = mStorageRef.putBytes(datatwo);
+//        uploadTask.addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception exception) {
+//                // Handle unsuccessful uploads
+//            }
+//        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//            @Override
+//            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//                // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
+//                Uri downloadUrl = taskSnapshot.getDownloadUrl();
+//
+////                mImageUri = downloadUrl;
+////                Toast.makeText(MainActivity.this, mImageUri.toString(), Toast.LENGTH_LONG).show();
+//
+//            }
+//        });
 
         if (mImageUri != null) {
             StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()
@@ -245,7 +287,7 @@ public class PhotoActivity extends AppCompatActivity {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(PhotoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(PhotoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -264,6 +306,8 @@ public class PhotoActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ImagesActivity.class);
         startActivity(intent);
     }
+
+
 
 
 
